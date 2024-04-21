@@ -1,0 +1,99 @@
+/* Layout */
+.layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 10% 1fr 10%;
+    min-height: 100vh;
+}
+
+/* Header */
+.layout__header {
+    display: grid;
+    grid-column: 1 / span 2;
+    justify-content: center;
+    align-items: center;
+    background-color: blanchedalmond;
+}
+
+/* Main */
+.layout__main {
+    display: grid;
+    grid-template-rows: 43% 25% 25%;
+    text-align: center;
+    padding: 20px;
+    padding-bottom: 20px;
+    grid-gap: 20px;
+    background-color: aliceblue;
+}
+
+/* Main Boxes */
+.layout__box--primary, .layout__box--secondary {
+    display: grid;
+    align-items: center;
+    background-color: rgb(248, 190, 190);
+}
+
+/* Main Group */
+.layout__group {
+    display: grid;
+    grid-row: 2;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    grid-gap: 20px;
+}
+
+/* Group Items */
+.layout__group-item--1, .layout__group-item--2 {
+    display: grid;
+    align-items: center;
+    background-color: rgb(248, 190, 190);
+}
+
+/* Sidebar */
+.layout__sidebar {
+    display: grid;
+    text-align: center;
+    padding: 20px;
+    background-color: pink;
+}
+
+/* Footer */
+.layout__footer {
+    display: grid;
+    grid-column: 1 / span 2;
+    justify-content: space-around;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    align-items: stretch;
+    grid-gap: 20px;
+    padding: 20px;
+    background-color: blanchedalmond;
+}
+
+/* Footer Text */
+.layout__footer-text {
+    display: grid;
+    text-align: center;
+    align-items: center;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1280px) {
+    .layout {
+        grid-template-columns: 1fr; /* Одна колонка на экранах шириной до 1280px */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .layout {
+        grid-template-columns: 1fr; /* Одна колонка на узких экранах */
+    }
+
+    .layout__header, .layout__footer {
+        grid-column: 1;
+    }
+
+    .layout__sidebar {
+        margin-bottom: 20px;
+    }
+}

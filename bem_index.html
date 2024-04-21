@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Адаптивная верстка</title>
+    <link rel="stylesheet" href="./styles/bem_style.css">
+</head>
+
+<body>
+    <div class="layout">
+        <header class="layout__header">
+            <h1>Шапка страницы</h1>
+        </header>
+
+        <main class="layout__main">
+            <div class="layout__box layout__box--primary">Основной блок</div>
+            <div class="layout__group">
+                <div class="layout__group-item layout__group-item--1">1</div>
+                <div class="layout__group-item layout__group-item--2">2</div>
+            </div>
+            <div class="layout__box layout__box--secondary">3</div>
+        </main>
+
+        <aside class="layout__sidebar">
+            <div>Боковая панель</div>
+        </aside>
+
+        <footer class="layout__footer">
+            <div class="layout__footer-text">HAVE</div>
+            <div class="layout__footer-text">A</div>
+            <div class="layout__footer-text">NICE</div>
+            <div class="layout__footer-text">DAY</div>
+        </footer>
+    </div>
+</body>
+
+</html>

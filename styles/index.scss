@@ -1,0 +1,59 @@
+// Общие константы
+$border-radius: 15px;
+$margin-bottom: 20px;
+$padding: 30px 0;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    border-radius: $border-radius;
+    padding: $padding; // Использование общей константы для отступа
+    margin: 0;
+}
+
+.container,
+.navbar,
+.container__section--warm,
+.footer__style {
+    border-radius: $border-radius; // Использование общей константы для border-radius
+}
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto; // Убирает повторение отступа
+}
+
+.navbar,
+.content,
+.container__section--warm {
+    margin-bottom: $margin-bottom; // Использование общей константы для margin-bottom
+}
+
+.container__section--warm {
+    padding: 40px 20px;
+}
+
+.container__section--warm-title {
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+.card-body {
+    border: solid grey;
+    display: flex;
+    flex-direction: column; // flex-direction уже устанавливает вертикальное направление
+    align-items: center; // Вместо text-align для центрирования по вертикали
+}
+
+.button__style {
+    display: flex;
+    justify-content: center;
+    align-items: center; // align-items уже обеспечивает вертикальное центрирование
+    border: solid grey;
+}
+
+.footer__style {
+    padding: $padding; // Использование общей константы для padding
+}
